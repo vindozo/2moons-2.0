@@ -130,7 +130,7 @@ function locale_date_format($format, $time, $LNG = NULL)
 
 function _date($format, $time = null, $toTimeZone = null, $LNG = NULL)
 {
-	if(!isset($time))
+	if(!isset($time) || $time > 9999999999)
 	{
 		$time	= TIMESTAMP;
 	}
